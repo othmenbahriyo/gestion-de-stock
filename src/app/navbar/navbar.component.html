@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark text-centre ">
+    <!-- <img src="assets/images/ll.png" style="height: 50px;  "> -->
+    <ul class="nav" *ngIf="bb =='b'">
+        <li>
+            <a class="brand" routerLink="ap" (click)="toggleCollapsed()" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+                <p>PRODUIT</p>
+            </a>
+        </li>
+        <li>
+            <a class="brand" routerLink="ad" (click)="toggleCollapsed()" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+                <p>CLIENT</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="brand" style="cursor:pointer" *ngIf="bb =='b'" (click)="logoutUser()" (click)="toggleCollapsed()" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+                <p>{{'navbar.Logout' | translate }}</p>
+            </a>
+        </li>
+
+
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleCollapsed()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="container">
+        <div class="navbar-menu" id="navbar-brand-centered" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+
+        </div>
+    </div>
+</nav>
